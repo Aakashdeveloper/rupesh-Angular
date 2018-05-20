@@ -1,13 +1,16 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
+import {FormsModule} from '@angular/forms'
 
 import { AppComponent } from "./app.component";
 import { ProductComponent } from "./products/product.component";
+import { ProductService } from "./products/product.service";
 
 @NgModule({
     //all the module will comw
     imports:[
-        BrowserModule
+        BrowserModule,
+        FormsModule
     ],
     //all the component will be in come here
     declarations:[
@@ -18,7 +21,9 @@ import { ProductComponent } from "./products/product.component";
     bootstrap:[
         AppComponent
     ],
-    providers:[]
+    providers:[
+        ProductService
+    ]
 })
 
 export class AppModule{}
