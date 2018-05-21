@@ -1,6 +1,7 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
-import {FormsModule} from '@angular/forms'
+import {FormsModule} from '@angular/forms';
+import {HttpModule} from '@angular/http'
 
 import { AppComponent } from "./app.component";
 import { ProductComponent } from "./products/product.component";
@@ -10,7 +11,8 @@ import { ProductService } from "./products/product.service";
     //all the module will comw
     imports:[
         BrowserModule,
-        FormsModule
+        FormsModule,
+        HttpModule
     ],
     //all the component will be in come here
     declarations:[

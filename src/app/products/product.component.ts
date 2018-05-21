@@ -13,6 +13,7 @@ export class ProductComponent{
     showImage=false;
     textType="rupesh"
     products:any[];
+    errorMessage;
 
     constructor(private _productService:ProductService){}
 
@@ -21,7 +22,9 @@ export class ProductComponent{
     }
 
     ngOnInit():void{
-        this.products = this._productService.getProducts();
+        this._productService.getProducts()
+        .subscribe((data)=>this.products=data,
+                (error)=>this.errorMessage=error)
     }
 }
 
